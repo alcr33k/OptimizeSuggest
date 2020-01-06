@@ -1,8 +1,8 @@
 <template>
     <div class="questionsMain">
         <h1>{{this.title}}</h1>
-        <Questions v-bind:questions="this.questions" />
-        <Result />
+        <Questions v-if="this.results === ''" v-bind:questions="this.questions" v-on:show-results="showResults"/>
+        <Result v-if="this.results !== ''" v-bind:answers="this.results"/>
     </div>
 </template>
 
@@ -21,11 +21,17 @@ export default {
     data() {
         return {
             questions: [],
-            title: 'Answer these questions to get started'
+            title: 'Answer these questions to get started',
+            results: ''
         }
     },
     created: function() {
         this.questions = jsonFile;
+    },
+    methods: {
+        showResults(answers) {
+            this.results = answers;
+        }
     }
 }
 </script>

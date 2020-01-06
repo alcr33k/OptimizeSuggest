@@ -1,55 +1,102 @@
-
 [
-        {
-            "questionText": "Ipsum porro reiciendis non esse itaque ea delectus dolorem?",
-            "questionOptions": [
-                {
-                    "id": 1,
-                    "text": "A"
-                },
-                {
-                    "id": 2,
-                    "text": "B"
-                }
-            ]
-        },
-        {
-            "questionText": "Question 2",
-            "questionOptions": [
-                {
-                    "id": 1,
-                    "text": "A"
-                },
-                {
-                    "id": 2,
-                    "text": "B"
-                }
-            ]
-        },
-        {
-            "questionText": "Question 3",
-            "questionOptions": [
-                {
-                    "id": 1,
-                    "text": "A"
-                },
-                {
-                    "id": 2,
-                    "text": "B"
-                }
-            ]
-        },
-        {
-            "questionText": "Question 4?",
-            "questionOptions": [
-                {
-                    "id": 1,
-                    "text": "A"
-                },
-                {
-                    "id": 2,
-                    "text": "B"
-                }
-            ]
-        }
-    ]
+    {
+        "questionText": "What's your current ski skill level?",
+        "questionOptions": [
+            {
+                "id": 1,
+                "text": "First-time skier"
+            },
+            {
+                "id": 2,
+                "text": "Beginner"
+            },
+            {
+                "id": 3,
+                "text": "Intermediate"
+            },
+            {
+                "id": 4,
+                "text": "Advanced"
+            },
+            {
+                "id": 5,
+                "text": "Expert"
+            }
+        ]
+    },
+    {
+        "questionText": "Where do you prefer to ski?",
+        "questionOptions": [
+            {
+                "id": 1,
+                "text": "In the snow park"
+            },
+            {
+                "id": 2,
+                "text": "Off piste, hopefully in powder"
+            },
+            {
+                "id": 3,
+                "text": "On nice groomed runs"
+            },
+            {
+                "id": 4,
+                "text": "Both on and off-piste"
+            },
+            {
+                "id": 5,
+                "text": "Ski touring unexplored terrain"
+            }
+        ]
+    },
+    {
+        "questionText": "How do you like your turns?",
+        "questionOptions": [
+            {
+                "id": 1,
+                "text": "Short"
+            },
+            {
+                "id": 2,
+                "text": "Pretty short"
+            },
+            {
+                "id": 3,
+                "text": "Balanced"
+            },
+            {
+                "id": 4,
+                "text": "Large"
+            },
+            {
+                "id": 5,
+                "text": "Huge"
+            }
+        ]
+    },
+    {
+        "questionText": "What's your size compared to the average person?",
+        "questionOptions": [
+            {
+                "id": 1,
+                "text": "Tiny"
+            },
+            {
+                "id": 2,
+                "text": "Small"
+            },
+            {
+                "id": 3,
+                "text": "Average"
+            },
+            {
+                "id": 4,
+                "text": "Large"
+            },
+            {
+                "id": 5,
+                "text": "Huge"
+            }
+        ]
+    }
+]

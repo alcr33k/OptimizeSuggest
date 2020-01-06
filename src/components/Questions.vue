@@ -45,6 +45,8 @@ export default {
             } else {
                 // all questions answered, handle results
                  this.answers.push(selectedOption);
+                // emit event till main
+                this.$emit('show-results', this.answers);
                 console.log('show results');
                 console.log(this.answers);
             }

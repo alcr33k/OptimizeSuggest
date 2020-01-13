@@ -10,6 +10,7 @@
 import Questions from './../components/Questions';
 import Result from './../components/Results';
 const jsonFile = require('./../assets/questions.json');
+import axios from 'axios'; 
 // let parsed = JSON.parse(jsonFile);
 
 export default {
@@ -29,8 +30,22 @@ export default {
         this.questions = jsonFile;
     },
     methods: {
-        showResults(answers) {
-            this.results = answers;
+        async showResults(answers) {
+            // ev visa loading bar if this takes time, test and see if needed
+            // skicka answers till backend
+            let config = {
+                headers: {
+                    'Content-Type': 'text/JSON'
+                }
+            }
+            try {
+                let res = await axios.post('/api/recommendations', answers, config);
+                console.log('res'); // ev unit test here
+                this.results = answers;
+            } catch (err) {
+                console.log(err.response.data);
+                // handle error in frontend
+            }
         }
     }
 }

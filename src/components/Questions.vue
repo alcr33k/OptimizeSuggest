@@ -5,7 +5,7 @@
         </div>
         <div class="questionsOptions">
             <div v-for="option in this.QuestionOptions" v-bind:key="option.id">
-                <QuestionsBtn v-bind:btnText="option.text" v-on:next-question="nextQuestion"/>
+                <QuestionsBtn v-bind:btnText="option.text" v-bind:btnId="option.id" v-on:next-question="nextQuestion"/>
             </div>
             <!-- <QuestionsBtn v-bind:btnText="option.text" v-bind:btnClass="btnClass"/> -->
         </div>
@@ -41,14 +41,18 @@ export default {
                 this.QuestionText = this.questions[this.currentQuestion].questionText;
                 this.QuestionOptions = this.questions[this.currentQuestion].questionOptions;
                 // push slected option to answers
-                this.answers.push(selectedOption);
+                this.answers.push({
+                    answerText: selectedOption.buttonText,
+                    answerId: selectedOption.buttonId 
+                });
             } else {
                 // all questions answered, handle results
-                 this.answers.push(selectedOption);
+                this.answers.push({
+                    answerText: selectedOption.buttonText,
+                    answerId: selectedOption.buttonId 
+                });
                 // emit event till main
                 this.$emit('show-results', this.answers);
-                console.log('show results');
-                console.log(this.answers);
             }
         }
     },

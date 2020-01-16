@@ -1,5 +1,5 @@
 <template>
-    <button @click="handleClick" v-bind:class="btnClass">{{btnText}}</button>
+    <button @click="handleClick" v-bind:id="btnId">{{btnText}}</button>
 </template>
 
 <script>
@@ -9,11 +9,14 @@ export default {
     name: 'QuestionsBtn',
     props: {
         btnText: String,
-        btnClass: String 
+        btnId: Number
     }, 
     methods: {
         handleClick() {
-            this.$emit('next-question', this.btnText); // emit to change question
+            this.$emit('next-question', {
+                buttonText: this.btnText,
+                buttonId: this.btnId
+            }); // emit to change question
         }
     }
 }

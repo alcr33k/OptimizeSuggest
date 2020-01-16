@@ -33,15 +33,20 @@ export default {
         async showResults(answers) {
             // ev visa loading bar if this takes time, test and see if needed
             // skicka answers till backend
+            console.log(answers);
+            // map all answersText to an array
+            let answerText = answers.map(answer => answer.answerText);
+            // map all answerIds to an array
+            let answerIds = answers.map(answer => answer.answerId)
             let config = {
                 headers: {
-                    'Content-Type': 'text/JSON'
+                    'Content-Type': 'application/json'
                 }
             }
             try {
-                let res = await axios.post('/api/recommendations', answers, config);
-                console.log('res'); // ev unit test here
-                this.results = answers;
+                let res = await axios.post('/api/recommendations', answerIds, config);
+                console.log(res.data); // ev unit test here
+                this.results = answerText;
             } catch (err) {
                 console.log(err.response.data);
                 // handle error in frontend

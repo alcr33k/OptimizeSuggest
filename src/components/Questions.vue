@@ -34,7 +34,6 @@ export default {
     }, 
     methods: {
         nextQuestion(selectedOption) {
-            console.log('wheey oh!');
             if (this.currentQuestion < this.questions.length-1) {
                 // update question
                 this.currentQuestion = this.currentQuestion + 1;

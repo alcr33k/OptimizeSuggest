@@ -42,18 +42,36 @@ function sortData(data, numberOfOptions) {
     let keys = Object.keys(data);
     keys.sort((a, b) => data[b] - data[a]);
     let topChoices = keys.slice(0, numberOfOptions);
-    let res = '';
+    let res = [];
     for (let i = 0; i < topChoices.length; i++) {
         let percentage = Math.round(data[topChoices[i]] * 100 * 10) / 10;
         if (percentage === 0) {
             break;
         }
-        res = res + "#" + (i+1) + ': ' + topChoices[i] + ' with a certainty of ' + percentage + '%' + '\r\n';
+        res.push({
+            name: topChoices[i],
+            certainty: percentage
+        });
+        // res = res + "#" + (i+1) + ': ' + topChoices[i] + ' with a certainty of ' + percentage + '%' + '\r\n';
 
     }
     return res;
 }
 
-const sortedData = sortData(data, 5);
+const sortedData = sortData(data, 5); 
 
 console.log(sortedData);
+
+const suggestProduct = function(inputData) {
+    let data = net.run({ 
+        skillLevel: inputData[0] / 5, 
+        skiPreference: inputData[1] / 5, 
+        turnPreference: inputData[2] / 5, 
+        size: inputData[3] / 5
+    });
+    let sortedData = sortData(data, 5); 
+
+    return sortedData;
+}
+
+module.exports = suggestProduct;

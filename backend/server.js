@@ -7,7 +7,7 @@ const suggestProduct = require('./neuralNet');
 const app = express();
 app.use(express.json()); // handle JSON body in express
 
-const port = 1337;
+const port = process.env.PORT || 1337;
 
 app.post('/api/recommendations', (req, res) => {
     let reqData = req.body;

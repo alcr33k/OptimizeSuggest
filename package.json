@@ -10,7 +10,8 @@
     "axios": "^0.19.1",
     "brain.js": "^2.0.0-alpha.11",
     "core-js": "^3.4.3",
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "express":"*"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.1.0",

@@ -17,4 +17,12 @@ app.post('/api/recommendations', (req, res) => {
     // for now send hello world, sen läs data och skicka till brain.js
 });
 
+// Handle production
+if (process.env.NODE_ENV === 'production') {
+    // Static folder
+    app.asue(express.static(__dirname + '/public/'));
+    // Handle SPA
+    app.get(/.*/, (req, res) => res.sendfile(__dirname + '/public/index.html'));
+}
+
 app.listen(port, () => console.log('Server started on port ' + port));

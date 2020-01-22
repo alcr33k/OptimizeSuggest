@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="results">
         <h2>You answered</h2>
         <div class="answers">
             <p v-for="(answer, index) in answers" v-bind:key="answer">
@@ -40,10 +40,13 @@ export default {
 .answers {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   align-items:flex-start;
-  padding: 0 1.5em;
 }
 @media only screen and (max-width: 767px) {
+    .results {
+        padding: 1em;
+    }
     .answers {
         display: flex;
         flex-direction: column;

@@ -2,7 +2,7 @@
     <div class="questionsMain">
         <h1>{{this.title}}</h1>
         <Questions v-if="this.answers === ''" v-bind:questions="this.questions" v-on:show-results="showResults"/>
-        <Result v-if="this.answers !== ''" v-bind:answers="this.answers" v-bind:suggestedProducts="this.suggestedProducts"/>
+        <Result v-if="this.answers !== ''" v-bind:answers="this.answers" v-bind:questionTags="this.questionTags" v-bind:suggestedProducts="this.suggestedProducts"/>
     </div>
 </template>
 
@@ -24,6 +24,7 @@ export default {
             questions: [],
             title: 'Answer these questions to get started',
             answers: '',
+            questionTags: '',
             suggestedProducts: []
         }
     },
@@ -33,10 +34,12 @@ export default {
     methods: {
         async showResults(results) {
             // ev visa loading bar if this takes time, test and see if needed
+            // map all answerTags to an array
+            let tags = results.map(answer => answer.questionTag);
             // map all answersText to an array
             let answerText = results.map(answer => answer.answerText);
             // map all answerIds to an array
-            let answerIds = results.map(answer => answer.answerId)
+            let answerIds = results.map(answer => answer.answerId);
             let config = {
                 headers: {
                     'Content-Type': 'application/json'
@@ -45,9 +48,10 @@ export default {
             // skicka answers till backend
             try {
                 let res = await axios.post('/api/recommendations', answerIds, config);
-                console.log(res.data); // ev unit test here
                 this.suggestedProducts = res.data;
                 this.answers = answerText;
+                this.questionTags = tags;
+                this.title = '';
             } catch (err) {
                 console.log(err.response.data);
                 // handle error in frontend
@@ -59,8 +63,16 @@ export default {
 
 <style scoped>
     .questionsMain {
+        background: white;
         border: 1px solid black;
-        width: 80%;
+        width: 90%;
         align-self: center;
+        border-radius: 1em;
+        font-size: 1.2em;
+    }
+    @media only screen and (max-width: 768px) {
+        .questionsMain {
+            font-size: 1em;
+        }
     }
 </style>

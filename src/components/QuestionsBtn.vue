@@ -1,5 +1,5 @@
 <template>
-    <button @click="handleClick" v-bind:id="btnId">{{btnText}}</button>
+    <button class="questionsBtn" @click="handleClick" v-bind:id="btnId">{{btnText}}</button>
 </template>
 
 <script>
@@ -24,8 +24,16 @@ export default {
 
 <style scoped>
     .questionsBtn {
-        width: 20%;
         padding: 0.4em;
+        border-radius: 1em;
+        width: 90%;
+        margin-bottom: 1em;
+        font-weight: bold;
         height: 4em;
+    }
+    @media only screen and (max-width: 768px) {
+        .questionsBtn {
+            margin-bottom: 0.5em;
+        }
     }
 </style>

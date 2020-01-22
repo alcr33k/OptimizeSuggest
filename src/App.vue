@@ -1,5 +1,9 @@
 <template>
   <div id="app">
+    <div id="header">
+      <h1>OptimizeSuggest</h1>
+      <img src="./assets/ai.png" alt="logo" />
+    </div>
     <Main />
   </div>
 </template>
@@ -28,5 +32,22 @@ export default {
   flex-direction: column;
   align-content: center;
   align-items: center;
+}
+#header {
+  display: flex;
+  flex-direction: row;
+  align-items:flex-start;
+}
+#header h1 {
+  color: white;
+  margin-right: 0.5em;
+}
+#header img {
+  width: 45px;
+  margin-top: 0.75em;
+}
+
+html {
+  background: #2c3e50;
 }
 </style>

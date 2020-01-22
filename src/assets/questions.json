@@ -1,6 +1,7 @@
 [
     {
         "questionText": "What's your current ski skill level?",
+        "questionsTag": "Skill level",
         "questionOptions": [
             {
                 "id": 1,
@@ -26,6 +27,7 @@
     },
     {
         "questionText": "Where do you prefer to ski?",
+        "questionsTag": "Ski preference",
         "questionOptions": [
             {
                 "id": 1,
@@ -33,11 +35,11 @@
             },
             {
                 "id": 2,
-                "text": "Off piste, hopefully in powder"
+                "text": "Off piste / powder"
             },
             {
                 "id": 3,
-                "text": "On nice groomed runs"
+                "text": "Groomed runs"
             },
             {
                 "id": 4,
@@ -45,12 +47,13 @@
             },
             {
                 "id": 5,
-                "text": "Ski touring unexplored terrain"
+                "text": "Ski touring"
             }
         ]
     },
     {
         "questionText": "How do you like your turns?",
+        "questionsTag": "Turn preference",
         "questionOptions": [
             {
                 "id": 1,
@@ -76,6 +79,7 @@
     },
     {
         "questionText": "What's your size compared to the average person?",
+        "questionsTag": "Size",
         "questionOptions": [
             {
                 "id": 1,

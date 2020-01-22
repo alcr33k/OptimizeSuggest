@@ -35,19 +35,21 @@ export default {
     methods: {
         nextQuestion(selectedOption) {
             if (this.currentQuestion < this.questions.length-1) {
+                // push slected option and questionTag to answers
+                this.answers.push({
+                    answerText: selectedOption.buttonText,
+                    questionTag: this.questions[this.currentQuestion].questionsTag,
+                    answerId: selectedOption.buttonId 
+                });
                 // update question
                 this.currentQuestion = this.currentQuestion + 1;
                 this.QuestionText = this.questions[this.currentQuestion].questionText;
                 this.QuestionOptions = this.questions[this.currentQuestion].questionOptions;
-                // push slected option to answers
-                this.answers.push({
-                    answerText: selectedOption.buttonText,
-                    answerId: selectedOption.buttonId 
-                });
             } else {
                 // all questions answered, handle results
                 this.answers.push({
                     answerText: selectedOption.buttonText,
+                    questionTag: this.questions[this.currentQuestion].questionsTag,
                     answerId: selectedOption.buttonId 
                 });
                 // emit event till main
@@ -70,7 +72,7 @@ export default {
 .questionsOptions {
     display: flex;
     width: 100%;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     align-content: center;
     padding: 1em 0;

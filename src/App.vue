@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="header">
-      <h1>OptimizeSuggest</h1>
+      <h1><a href="https://fathomless-falls-93329.herokuapp.com/">OptimizeSuggest</a></h1>
       <img src="./assets/ai.png" alt="logo" />
     </div>
     <Main />
@@ -41,6 +41,10 @@ export default {
 #header h1 {
   color: white;
   margin-right: 0.5em;
+}
+#header a {
+  color: white;
+  text-decoration: none;
 }
 #header img {
   width: 45px;

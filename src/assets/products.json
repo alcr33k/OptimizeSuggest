@@ -1,82 +1,102 @@
 [
     {
-        "productName": "Beginner Carving Ski",
-        "width": 100,
-        "flex": 110,
-        "turnRadius": 17, 
-        "sidecut": "Rocker",
-        "decr": "decr"
+        "productName": "Rossignol Experience 76",
+        "bestUse": "Beginner Carving Ski",
+        "width": 120,
+        "flex": 60,
+        "turnRadius": 15, 
+        "sidecut": "Camver",
+        "decr": "A playful beginner ski, perfect for learning the basics",
+        "image": "1.jpg"
     },
     {
-        "productName": "Intermediate Carving Ski",
-        "width": 100,
-        "flex": 110,
-        "turnRadius": 17, 
-        "sidecut": "Rocker",
-        "decr": "decr"
+        "productName": "Atomic Vantage X 75",
+        "bestUse": "Intermediate Carving Ski",
+        "width": 120,
+        "flex": 75,
+        "turnRadius": 13, 
+        "sidecut": "Camber",
+        "decr": "This is a stable resort ski with quick, nimble turns.",
+        "image": "2.png"
     },
     {
-        "productName": "Advanced Carving Ski",
-        "width": 100,
+        "productName": "K2 Mindbender 99 Ti",
+        "bestUse": "Advanced Carving Ski",
+        "width": 99,
         "flex": 110,
         "turnRadius": 17, 
         "sidecut": "Rocker",
-        "decr": "decr"
+        "decr": "Big but agile. Heavy but nimble. Predictable but fun. The Mindbender gave us the confidence to ski faster and harder.",
+        "image": "3.jpg"
     },
     {
-        "productName": "Beginner All-Mountain",
-        "width": 100,
-        "flex": 110,
-        "turnRadius": 17, 
+        "productName": "Head Monster 83 X ",
+        "bestUse": "Beginner All-Mountain Ski",
+        "width": 130,
+        "flex": 80,
+        "turnRadius": 14, 
         "sidecut": "Rocker",
-        "decr": "decr"
+        "decr": "If you are a beginner that want to enjoy the full mountain, then this is the ski for you!",
+        "image": "4.jpg"
     },
     {
-        "productName": "Intermediate All-Mountain",
-        "width": 100,
-        "flex": 110,
+        "productName": "Atomic Vantage 86 C",
+        "bestUse": "Intermediate All-Mountain Ski",
+        "width": 125,
+        "flex": 90,
         "turnRadius": 17, 
         "sidecut": "Rocker",
-        "decr": "decr"
+        "decr": "It has a great design for those starting to venture off trail.",
+        "image": "5.jpg"
     },
     {
-        "productName": "Park Ski",
-        "width": 100,
+        "productName": "Armada ARW 86",
+        "bestUse": "Park Ski",
+        "width": 86,
         "flex": 110,
-        "turnRadius": 17, 
+        "turnRadius": 16, 
         "sidecut": "Rocker",
-        "decr": "decr"
+        "decr": "Offers great performance on both rails and jumps in the snow park. The ideal park ski!",
+        "image": "6.jpg"
     },
     {
-        "productName": "Intermediate Powder Ski",
-        "width": 100,
-        "flex": 110,
+        "productName": "Salomon QST 118",
+        "bestUse": "Intermediate Powder Ski",
+        "width": 118,
+        "flex": 120,
         "turnRadius": 17, 
         "sidecut": "Rocker",
-        "decr": "decr"
+        "decr": "The Salomon QST 118 is the widest ski in the range, with full twin rocker to help you float in the deepest powder.",
+        "image": "7.jpg"
     },
     {
-        "productName": "Advanced Powder Ski",
-        "width": 100,
+        "productName": "Nordica Enforcer Pro",
+        "bestUse": "Advanced Powder Ski",
+        "width": 115,
         "flex": 110,
-        "turnRadius": 17, 
+        "turnRadius": 22, 
         "sidecut": "Rocker",
-        "decr": "decr"
+        "decr": "A strong powder ski that is capable of powering through any conditions.",
+        "image": "8.jpg"
     },
     {
-        "productName": "Ski for long turns on resort",
-        "width": 100,
-        "flex": 110,
+        "productName": "Salomon X S/FORCE BOLD",
+        "bestUse": "Resort Ski",
+        "width": 84,
+        "flex": 80,
         "turnRadius": 17, 
         "sidecut": "Rocker",
-        "decr": "decr"
+        "decr": "If you prefer groomed runs in the resort and prefer long turns, then this is the ski!",
+        "image": "9.jpg"
     },
     {
-        "productName": "Touring Ski",
-        "width": 100,
+        "productName": "Voilé HyperCharger",
+        "bestUse": "Touring Ski",
+        "width": 106,
         "flex": 110,
-        "turnRadius": 17, 
+        "turnRadius": 22, 
         "sidecut": "Rocker",
-        "decr": "decr"
+        "decr": "A ski with un factor and great all-around performance at a good value, perfect for ski touring.",
+        "image": "10.jpg"
     }
 ]

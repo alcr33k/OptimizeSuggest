@@ -11,7 +11,6 @@ const port = process.env.PORT || 1337;
 
 app.post('/api/recommendations', (req, res) => {
     let reqData = req.body;
-    console.log('body', req.body);
     let suggestedProduct = suggestProduct(reqData);
     res.send(suggestedProduct);
     // for now send hello world, sen läs data och skicka till brain.js

@@ -7,7 +7,6 @@
             <div v-for="option in this.QuestionOptions" v-bind:key="option.id">
                 <QuestionsBtn v-bind:btnText="option.text" v-bind:btnId="option.id" v-on:next-question="nextQuestion"/>
             </div>
-            <!-- <QuestionsBtn v-bind:btnText="option.text" v-bind:btnClass="btnClass"/> -->
         </div>
     </div>
 </template>

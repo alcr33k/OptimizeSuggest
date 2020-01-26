@@ -9,7 +9,7 @@
 </template>
 
 <script>
-// kanske ska sen centrera applikationen vertikalt
+
 import Main from './components/Main.vue';
 
 export default {

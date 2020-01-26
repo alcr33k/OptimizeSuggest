@@ -1,11 +1,10 @@
 const brain = require('brain.js');
 const trainingData = require('./trainingData');
 
+// create a brain nuralneywork with 6x6 hidden layers
 const net = new brain.NeuralNetwork({
     hiddenLayers: [6, 6]
 });
-
-// net.train(trainingData);
 
 // clone trainingData
 const normalizedTrainingData = [...trainingData];
@@ -20,24 +19,32 @@ function normalizeTrainingData() {
     }
 }
 
+// train the network with 10000 iterations
 net.train(normalizedTrainingData, {
     // log: (stats) => console.log(stats),
     // logPeriod: 2000,
     iterations: 10000
 });
 
-let _skillLevel = 5;
-let _skiPreference = 5;
-let _turnPreference = 5;
-let _size = 3;
+// function for testing the network
+function testNetwork() {
+    let _skillLevel = 5;
+    let _skiPreference = 5;
+    let _turnPreference = 5;
+    let _size = 3;
 
-let data = net.run({ 
-    skillLevel: _skillLevel/5, 
-    skiPreference: _skiPreference/5, 
-    turnPreference: _turnPreference/5, 
-    size: _size/5
-});
+    let data = net.run({ 
+        skillLevel: _skillLevel/5, 
+        skiPreference: _skiPreference/5, 
+        turnPreference: _turnPreference/5, 
+        size: _size/5
+    });
 
+    const sortedData = sortData(data, 5); 
+    console.log(sortedData);
+}
+
+// sort the sata from the AI, numberofoptions is the max number of suggestions from the AI
 function sortData(data, numberOfOptions) {
     let keys = Object.keys(data);
     keys.sort((a, b) => data[b] - data[a]);
@@ -52,17 +59,12 @@ function sortData(data, numberOfOptions) {
             name: topChoices[i],
             certainty: percentage
         });
-        // res = res + "#" + (i+1) + ': ' + topChoices[i] + ' with a certainty of ' + percentage + '%' + '\r\n';
-
     }
     return res;
 }
 
-const sortedData = sortData(data, 5); 
-
-console.log(sortedData);
-
 const suggestProduct = function(inputData) {
+    // kör AI med normaliserad data
     let data = net.run({ 
         skillLevel: inputData[0] / 5, 
         skiPreference: inputData[1] / 5, 

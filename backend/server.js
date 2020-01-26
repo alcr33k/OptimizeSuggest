@@ -1,7 +1,5 @@
 const express = require('express');
 const suggestProduct = require('./neuralNet');
-// will ev need body pasrser to read post request data
-// folder structure might change depending on herokuapp
 
 // Server for backend made in express.js
 const app = express();
@@ -11,9 +9,8 @@ const port = process.env.PORT || 1337;
 
 app.post('/api/recommendations', (req, res) => {
     let reqData = req.body;
-    let suggestedProduct = suggestProduct(reqData);
-    res.send(suggestedProduct);
-    // for now send hello world, sen läs data och skicka till brain.js
+    let suggestedProduct = suggestProduct(reqData); // send the request data to the neural network
+    res.send(suggestedProduct); // send back the suggested products
 });
 
 // Handle production

@@ -11,7 +11,6 @@ import Questions from './../components/Questions';
 import Result from './../components/Results';
 const jsonFile = require('./../assets/questions.json');
 import axios from 'axios'; 
-// let parsed = JSON.parse(jsonFile);
 
 export default {
     name: 'Main',
@@ -33,7 +32,6 @@ export default {
     },
     methods: {
         async showResults(results) {
-            // ev visa loading bar if this takes time, test and see if needed
             // map all answerTags to an array
             let tags = results.map(answer => answer.questionTag);
             // map all answersText to an array

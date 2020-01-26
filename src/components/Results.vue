@@ -28,6 +28,7 @@ export default {
         suggestedProducts: Array
     }, 
     computed: {
+        // Hitta produkt i products.json baserat på namnet man får suggested av AI
         topProduct: function() {
             let topSuggestion = this.suggestedProducts[0].name;
             let index = productsJson.findIndex(val => val.productName === topSuggestion);

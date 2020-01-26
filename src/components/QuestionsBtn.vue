@@ -3,8 +3,7 @@
 </template>
 
 <script>
-// bind class to button, kan jag också ha den optional? optional === ''
-// alternativet är att vi kör en hårdkodad klass som sätts utifrån tenary expression
+
 export default {
     name: 'QuestionsBtn',
     props: {
